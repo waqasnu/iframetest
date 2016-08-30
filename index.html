@@ -1,11 +1,23 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <title>window.open Example</title>
 
-<iframe src="http://enformers.cf/freegames/index.html" width="100%" height="1000">
-  <p>Your browser does not support iframes.</p>
-</iframe>
-
-</body>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // external url
+        var ref = window.open(encodeURI('http://enformers.cf/freegames/'), '_blank', 'location=no');
+        // relative document
+       // ref = window.open('next.html', '_self');
+    }
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
-
